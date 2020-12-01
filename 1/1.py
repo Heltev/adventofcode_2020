@@ -1,3 +1,5 @@
+import sys
+
 def readfile():
   with open('input.txt') as f:
     lines = f.read().splitlines()
@@ -27,6 +29,8 @@ def part_two():
           break
 
 def main():
-  part_one()
-  part_two()
+  if int(sys.argv[1]) == 1:
+    part_one()
+  elif int(sys.argv[1]) == 2:
+    part_two()
 main()
